@@ -1,9 +1,10 @@
 def sum_array(array):
-    '''Return sum of all items in array'''
+
     list =0
     for i in array:
         total= total + i
         return list
+  '''Return sum of all items in array'''
 
 def fibonacci(n):
     if n == 0:
@@ -30,9 +31,6 @@ def factorial(n):
     '''Return n!'''
 
 def reverse(word):
-
-    '''Return word in reverse'''
-    rev = word.split()
-    rev = rev[-1::-1]
-    result = " ".join(rev)
-    return result
+    rev = word[::-1]
+    return rev
+'''Return word in reverse'''
