@@ -1,11 +1,12 @@
-def bubbleSort(arr):
-    n = len(arr)
+def bubble_sort(items):
+    n = len(items)
     for i in range(n-1,0,-1):
         for j in range(i):
-            if arr[j] > arr[j+1] :
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
+            if items[j] > items[j+1] :
+                items[j], items[j+1] = items[j+1], items[j]
+
     '''Return array of items, sorted in ascending order'''
+    return items
 
 def merge_sort(items):
     if len(items) < 2:return items
@@ -23,13 +24,12 @@ def merge_sort(items):
     return result
 
 def quick_sort(items):
-    def quick_sort(l):
-    if len(l) == 0:
-        return l
-    start = l[0]
-    first = [x for x in l if x == start]
-    smaller = quick_sort([x for x in l if x < start])
-    larger = quick_sort([x for x in l if x > start])
+    if len(items) == 0:
+        return items
+    start = items[0]
+    first = [x for x in items if x == start]
+    smaller = quick_sort([x for x in items if x < start])
+    larger = quick_sort([x for x in items if x > start])
 
     '''Return array o
     gnbfv dcswf items, sorted in ascending order'''
